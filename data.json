@@ -1,0 +1,33 @@
+{
+    "users": [
+        {
+            "FirstName": "John",
+            "LastName": "Jericco",
+            "Age": "39",
+            "pin": "2210",
+            "Email": "jericcojohn@gmail.com",
+            "account_num": 6962674496,
+            "balance": 503000.0
+        },
+        {
+            "FirstName": "Mark",
+            "LastName": "Henry",
+            "Age": "33",
+            "pin": "3330",
+            "Email": "markhenry@gmail.com",
+            "account_num": 7237261228,
+            "balance": 2000.0
+        }
+    ],
+    "agents": [
+        {
+            "FirstName": "Clementina",
+            "LastName": "Okpeh",
+            "Age": "22",
+            "pin": "4040",
+            "Email": "clemokpeh@gmail.com",
+            "account_num": 4174303775,
+            "balance": 0
+        }
+    ]
+}
