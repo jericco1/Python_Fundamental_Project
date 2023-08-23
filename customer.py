@@ -86,7 +86,7 @@ class CreateUser(SubBank):
                         if recipient_info['account_num'] == recipient_account_num:
                             recipient_found = True # returns true to indicate that receiver's account is valid
                             recipient_info['balance'] += amount
-                            print(f"The sum of ${amount} been deducted from {user_info['FirstName']} {user_info['LastName']} and transferred to {recipient_info['FirstName']} {recipient_info['LastName']}")
+                            print(f"The sum of ${amount} has been deducted from {user_info['FirstName']} {user_info['LastName']} and transferred to {recipient_info['FirstName']} {recipient_info['LastName']}")
                             self.write_data() # calls this method to provide an update to the file
                             return
         if not sender_found:  #this line checks if the sender account is not valid or found
