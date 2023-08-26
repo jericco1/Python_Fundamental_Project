@@ -15,7 +15,6 @@ class CreateAgent(SubBank):
         new_agent_details = ["FirstName", "LastName", "Age", "pin", "Email"] # this creates a list that contains what agent needs to enter
         for detail in new_agent_details:
             new_agent[detail] = input(f"Enter {detail}: ")
-        new_agent['account_num'] = self.generate_account_number()
         new_agent['balance'] = 0
         self.data["agents"].append(new_agent) # the line adds "new_agent" dictionary to the list created in the user dictionaries stored in the "data" dictionary
         self.write_data() # this line calls the method "write_data" from the parent class to save the updaated data to the data file
