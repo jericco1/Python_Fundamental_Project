@@ -18,8 +18,8 @@ class CreateAgent(SubBank):
         new_agent['balance'] = 0
         self.data["agents"].append(new_agent) # the line adds "new_agent" dictionary to the list created in the user dictionaries stored in the "data" dictionary
         self.write_data() # this line calls the method "write_data" from the parent class to save the updaated data to the data file
-
         print("Agent account has been successfully created")
+        
     def agent_login(self):
         input_email = input("Enter agent email: ")
         input_pin = input("Enter agent PIN: ")
@@ -94,21 +94,20 @@ class CreateAgent(SubBank):
             print("Account deletion cancelled.")
 
     def reset_agent_pin(self):
-        agent_account_num = int(input("Enter your agent account number: "))
         agent_pin = input("Enter your agent PIN: ")
         agent = None
         for agent_info in self.data["agents"]:
-            if agent_info["account_num"] == agent_account_num and agent_info["pin"] == agent_pin:
+            if agent_info["pin"] == agent_pin:
                 agent = agent_info
                 break
         if agent is None:
-            print("Agent account number or PIN not found.")
+            print("Agent PIN cannot found.")
             return
         old_password = input("Enter your old PIN: ")
         correct_email = agent["Email"]
         input_email = input("Input your correct email: ")
 
-        if old_password == agent["pin"] or input_email == correct_email:
+        if old_password == agent["pin"] and input_email == correct_email:
             new_pin = input("Enter new PIN: ")
             agent["pin"] = new_pin
             self.write_data()
